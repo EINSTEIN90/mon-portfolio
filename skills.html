@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences - Portfolio Développeur Web</title>
+    <meta name="description" content="Découvrez mes compétences techniques en développement web : HTML, CSS, JavaScript, frameworks et outils modernes">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-page text-primary font-inter antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-page/90 backdrop-blur-sm border-b border-border-light z-50">
+        <div class="container mx-auto px-5 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-brand-primary">
+                    <a href="index.html">Portfolio</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link">À propos</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Projets</a></li>
+                    <li><a href="skills.html" class="nav-link active">Compétences</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="cv.html" class="nav-link">CV</a></li>
+                </ul>
+                 <!-- CONTENEUR POUR LE BOUTON DE THÈME ET LE BOUTON MOBILE -->
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full border border-border-light hover:bg-card transition">
+                        🌙
+                    </button>
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden text-brand-primary focus:outline-none" id="mobile-menu-btn">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden mt-4 pb-4" id="mobile-menu">
+                <ul class="flex flex-col space-y-2">
+                    <li><a href="index.html" class="nav-link block">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link block">À propos</a></li>
+                    <li><a href="portfolio.html" class="nav-link block">Projets</a></li>
+                    <li><a href="skills.html" class="nav-link block active">Compétences</a></li>
+                    <li><a href="contact.html" class="nav-link block">Contact</a></li>
+                    <li><a href="cv.html" class="nav-link block">CV</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-page">
+        <div class="container mx-auto px-5">
+            <div class="text-center mb-16">
+                <h1 class="heading-1 mb-6">Mes compétences</h1>
+                <p class="body-large max-w-3xl mx-auto text-secondary">
+                    Technologies, outils et méthodologies que je maîtrise pour créer des solutions web performantes
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="py-16 bg-card">
+        <div class="container mx-auto px-5">
+            <div class="text-center mb-16">
+                <h2 class="heading-2 mb-6">Compétences techniques</h2>
+                <p class="body-medium text-secondary max-w-2xl mx-auto">
+                    Maîtrise approfondie des technologies frontend et backend
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Frontend Skills -->
+                <div>
+                    <h3 class="heading-3 mb-8 text-center">Frontend</h3>
+                    <div class="space-y-8">
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center">
+                                    <i class="fab fa-html5 text-2xl text-orange-500 mr-3"></i>
+                                    <span class="body-small font-semibold">HTML5</span>
+                                </div>
+                                <span class="caption">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                            <p class="body-small text-secondary mt-2 text-sm">
+                                Sémantique avancée, accessibilité, SEO, HTML moderne
+                            </p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center">
+                                    <i class="fab fa-css3-alt text-2xl text-blue-500 mr-3"></i>
+                                    <span class="body-small font-semibold">CSS3 & SASS</span>
+                                </div>
+                                <span class="caption">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                            <p class="body-small text-secondary mt-2 text-sm">
+                                Flexbox, Grid, animations, responsive design, preprocesseurs
+                            </p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center">
+                                    <i class="fab fa-js-square text-2xl text-yellow-500 mr-3"></i>
+                                    <span class="body-small font-semibold">JavaScript ES6+</span>
+                                </div>
+                                <span class="caption">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                            <p class="body-small text-secondary mt-2 text-sm">
+                                Vanilla JS, API moderne, async/await, modules, DOM manipulation
+                            </p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center">
+                                    <i class="fab fa-react text-2xl text-cyan-500 mr-3"></i>
+                                    <span class="body-small font-semibold">React & Vue.js</span>
+                                </div>
+                                <span class="caption">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                            <p class="body-small text-secondary mt-2 text-sm">
+                                Composants, hooks, state management, routing
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Backend & Tools -->
+                <div>
+                    <h3 class="heading-3 mb-8 text-center">Backend & Outils</h3>
+                    <div class="space-y-8">
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center">
+                                    <i class="fab fa-node-js text-2xl text-green-500 mr-3"></i>
+                                    <span class="body-small font-semibold">Node.js & Express</span>
+                                </div>
+                                <span class="caption">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                            <p class="body-small text-secondary mt-2 text-sm">
+                                API REST, middleware, authentification, gestion des erreurs
+                            </p>
+                        </div>
+                        
+                         <div class="skill-item">
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-database text-2xl text-green-600 mr-3"></i>
+                                    <span class="body-small font-semibold">MongoDB & MySQL</span>
+                                </div>
+                                <span class="caption">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                            <p class="body-small text-secondary mt-2 text-sm">
+                                NoSQL, relationnel, optimisation des requêtes, indexation
+                            </p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center">
+                                    <i class="fab fa-git-alt text-2xl text-red-500 mr-3"></i>
+                                    <span class="body-small font-semibold">Git & GitHub</span>
+                                </div>
+                                <span class="caption">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                            <p class="body-small text-secondary mt-2 text-sm">
+                                Versioning, branches, workflows, collaboration en équipe
+                            </p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-tools text-2xl text-secondary-yellow mr-3"></i>
+                                    <span class="body-small font-semibold">DevTools & Build</span>
+                                </div>
+                                <span class="caption">78%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 78%"></div>
+                            </div>
+                            <p class="body-small text-secondary mt-2 text-sm">
+                                Webpack, Vite, npm/yarn, debugging, performance optimization
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soft Skills & Methodologies -->
+    <section class="py-16 bg-page">
+        <div class="container mx-auto px-5">
+            <div class="text-center mb-16">
+                <h2 class="heading-2 mb-6">Compétences transversales</h2>
+                <p class="body-medium text-secondary max-w-2xl mx-auto">
+                    Méthodologies et soft skills pour mener à bien vos projets
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-8 bg-card rounded-lg border border-border-light hover:border-border-medium transition-all">
+                    <div class="w-16 h-16 bg-brand-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-lightbulb text-2xl text-brand-primary"></i>
+                    </div>
+                    <h3 class="heading-5 mb-4">Résolution de problèmes</h3>
+                    <p class="body-small text-secondary">
+                        Analyse approfondie et solutions créatives pour surmonter les défis techniques.
+                    </p>
+                </div>
+                
+                <div class="text-center p-8 bg-card rounded-lg border border-border-light hover:border-border-medium transition-all">
+                    <div class="w-16 h-16 bg-secondary-yellow/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-2xl text-secondary-yellow"></i>
+                    </div>
+                    <h3 class="heading-5 mb-4">Travail d'équipe</h3>
+                    <p class="body-small text-secondary">
+                        Collaboration efficace, communication claire et adaptation aux méthodologies agiles.
+                    </p>
+                </div>
+                
+                <div class="text-center p-8 bg-card rounded-lg border border-border-light hover:border-border-medium transition-all">
+                    <div class="w-16 h-16 bg-secondary-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-clock text-2xl text-secondary-blue"></i>
+                    </div>
+                    <h3 class="heading-5 mb-4">Gestion du temps</h3>
+                    <p class="body-small text-secondary">
+                        Respect des délais, priorisation des tâches et organisation optimale des projets.
+                    </p>
+                </div>
+                
+                <div class="text-center p-8 bg-card rounded-lg border border-border-light hover:border-border-medium transition-all">
+                    <div class="w-16 h-16 bg-secondary-olive/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-graduation-cap text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="heading-5 mb-4">Apprentissage continu</h3>
+                    <p class="body-small text-secondary">
+                        Veille technologique active et adaptation rapide aux nouvelles technologies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies & Frameworks -->
+    <section class="py-16 bg-card">
+        <div class="container mx-auto px-5">
+            <div class="text-center mb-16">
+                <h2 class="heading-2 mb-6">Technologies & Frameworks</h2>
+                <p class="body-medium text-secondary max-w-2xl mx-auto">
+                    Écosystème complet d'outils modernes que j'utilise régulièrement
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                <!-- Tech Icons -->
+                <div class="flex flex-col items-center p-4 rounded-lg hover:bg-secondary-olive/10 transition-all group">
+                    <i class="fab fa-html5 text-4xl text-orange-500 mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="body-small font-semibold">HTML5</span>
+                </div>
+                
+                <div class="flex flex-col items-center p-4 rounded-lg hover:bg-secondary-olive/10 transition-all group">
+                    <i class="fab fa-css3-alt text-4xl text-blue-500 mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="body-small font-semibold">CSS3</span>
+                </div>
+                
+                <div class="flex flex-col items-center p-4 rounded-lg hover:bg-secondary-olive/10 transition-all group">
+                    <i class="fab fa-js-square text-4xl text-yellow-500 mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="body-small font-semibold">JavaScript</span>
+                </div>
+                
+                <div class="flex flex-col items-center p-4 rounded-lg hover:bg-secondary-olive/10 transition-all group">
+                    <i class="fab fa-react text-4xl text-cyan-500 mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="body-small font-semibold">React</span>
+                </div>
+                
+                <div class="flex flex-col items-center p-4 rounded-lg hover:bg-secondary-olive/10 transition-all group">
+                    <i class="fab fa-vuejs text-4xl text-green-500 mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="body-small font-semibold">Vue.js</span>
+                </div>
+                
+                <div class="flex flex-col items-center p-4 rounded-lg hover:bg-secondary-olive/10 transition-all group">
+                    <i class="fab fa-node-js text-4xl text-green-600 mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="body-small font-semibold">Node.js</span>
+                </div>
+                
+                <div class="flex flex-col items-center p-4 rounded-lg hover:bg-secondary-olive/10 transition-all group">
+                    <i class="fas fa-database text-4xl text-blue-600 mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="body-small font-semibold">MongoDB</span>
+                </div>
+                
+                <div class="flex flex-col items-center p-4 rounded-lg hover:bg-secondary-olive/10 transition-all group">
+                    <i class="fab fa-git-alt text-4xl text-red-500 mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="body-small font-semibold">Git</span>
+                </div>
+                
+                <div class="flex flex-col items-center p-4 rounded-lg hover:bg-secondary-olive/10 transition-all group">
+                    <i class="fab fa-sass text-4xl text-pink-500 mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="body-small font-semibold">Sass</span>
+                </div>
+                
+                <div class="flex flex-col items-center p-4 rounded-lg hover:bg-secondary-olive/10 transition-all group">
+                    <i class="fab fa-bootstrap text-4xl text-purple-500 mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="body-small font-semibold">Bootstrap</span>
+                </div>
+                
+                <div class="flex flex-col items-center p-4 rounded-lg hover:bg-secondary-olive/10 transition-all group">
+                    <i class="fas fa-wind text-4xl text-cyan-600 mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="body-small font-semibold">Tailwind</span>
+                </div>
+                
+                <div class="flex flex-col items-center p-4 rounded-lg hover:bg-secondary-olive/10 transition-all group">
+                    <i class="fab fa-npm text-4xl text-red-600 mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="body-small font-semibold">NPM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Education -->
+    <section class="py-16 bg-page">
+        <div class="container mx-auto px-5">
+            <div class="text-center mb-16">
+                <h2 class="heading-2 mb-6">Formation & Certifications</h2>
+                <p class="body-medium text-secondary max-w-2xl mx-auto">
+                    Apprentissage continu et validation des compétences
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="heading-4 mb-8">Certifications</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4 p-6 bg-card rounded-lg border border-border-light">
+                            <div class="w-12 h-12 bg-brand-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-certificate text-brand-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="heading-6 mb-2">JavaScript Algorithms and Data Structures</h4>
+                                <p class="body-small text-secondary mb-2">FreeCodeCamp - 2023</p>
+                                <p class="caption">300 heures de formation intensive</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 p-6 bg-card rounded-lg border border-border-light">
+                            <div class="w-12 h-12 bg-secondary-yellow/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-award text-secondary-yellow"></i>
+                            </div>
+                            <div>
+                                <h4 class="heading-6 mb-2">Responsive Web Design</h4>
+                                <p class="body-small text-secondary mb-2">FreeCodeCamp - 2023</p>
+                                <p class="caption">Techniques avancées de responsive design</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 p-6 bg-card rounded-lg border border-border-light">
+                            <div class="w-12 h-12 bg-secondary-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-medal text-secondary-blue"></i>
+                            </div>
+                            <div>
+                                <h4 class="heading-6 mb-2">Git & GitHub Essentials</h4>
+                                <p class="body-small text-secondary mb-2">Coursera - 2022</p>
+                                <p class="caption">Workflows de développement collaboratif</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="heading-4 mb-8">Formation</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4 p-6 bg-card rounded-lg border border-border-light">
+                            <div class="w-12 h-12 bg-secondary-olive/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-graduation-cap text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="heading-6 mb-2">Développement Web Full-Stack</h4>
+                                <p class="body-small text-secondary mb-2">Formation intensive - 2022</p>
+                                <p class="caption">6 mois · Frontend, Backend, Bases de données</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 p-6 bg-card rounded-lg border border-border-light">
+                            <div class="w-12 h-12 bg-brand-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-book text-brand-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="heading-6 mb-2">Autodidacte & Projets personnels</h4>
+                                <p class="body-small text-secondary mb-2">2021 - Présent</p>
+                                <p class="caption">Apprentissage continu via documentation, tutoriels, pratique</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 p-6 bg-card rounded-lg border border-border-light">
+                            <div class="w-12 h-12 bg-secondary-yellow/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-users-gear text-secondary-yellow"></i>
+                            </div>
+                            <div>
+                                <h4 class="heading-6 mb-2">Méthodologies Agiles</h4>
+                                <p class="body-small text-secondary mb-2">Scrum Master Basics - 2023</p>
+                                <p class="caption">Gestion de projet et travail en équipe</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-card">
+        <div class="container mx-auto px-5 text-center">
+            <h2 class="heading-2 mb-6">Intéressé par mes compétences ?</h2>
+            <p class="body-large text-secondary max-w-2xl mx-auto mb-8">
+                Découvrez comment nous pouvons collaborer pour concrétiser vos projets web
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="portfolio.html" class="btn-primary">
+                    Voir mes réalisations
+                </a>
+                <a href="contact.html" class="btn-secondary">
+                    Discuter d'un projet
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-page border-t border-border-light py-12">
+        <div class="container mx-auto px-5">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="heading-5 mb-4">Portfolio</h3>
+                    <p class="body-small text-secondary">
+                        Développeur web passionné créant des expériences digitales modernes et performantes.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="heading-5 mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="body-small text-secondary hover:text-brand-primary transition-colors">À propos</a></li>
+                        <li><a href="portfolio.html" class="body-small text-secondary hover:text-brand-primary transition-colors">Projets</a></li>
+                        <li><a href="skills.html" class="body-small text-secondary hover:text-brand-primary transition-colors">Compétences</a></li>
+                        <li><a href="contact.html" class="body-small text-secondary hover:text-brand-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="heading-5 mb-4">Suivez-moi</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="mailto:contact@example.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-border-light mt-8 pt-8 text-center">
+                <p class="body-small text-secondary">
+                    © 2025 Portfolio. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/mode.js"></script>
+</body>
+</html>

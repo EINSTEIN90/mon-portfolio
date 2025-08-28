@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Portfolio Développeur Web</title>
+    <meta name="description" content="Découvrez mon parcours, mes expériences et ma passion pour le développement web moderne">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-page text-primary font-inter antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-page/90 backdrop-blur-sm border-b border-border-light z-50">
+        <div class="container mx-auto px-5 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-brand-primary">
+                    <a href="index.html">Portfolio</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link active">À propos</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Projets</a></li>
+                    <li><a href="skills.html" class="nav-link">Compétences</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="cv.html" class="nav-link">CV</a></li>
+                </ul>
+
+                  <!-- CONTENEUR POUR LE BOUTON DE THÈME ET LE BOUTON MOBILE -->
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full border border-border-light hover:bg-card transition">
+                        🌙
+                    </button>
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden text-brand-primary focus:outline-none" id="mobile-menu-btn">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden mt-4 pb-4" id="mobile-menu">
+                <ul class="flex flex-col space-y-2">
+                    <li><a href="index.html" class="nav-link block">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link block active">À propos</a></li>
+                    <li><a href="portfolio.html" class="nav-link block">Projets</a></li>
+                    <li><a href="skills.html" class="nav-link block">Compétences</a></li>
+                    <li><a href="contact.html" class="nav-link block">Contact</a></li>
+                    <li><a href="cv.html" class="nav-link block">CV</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-page">
+        <div class="container mx-auto px-5">
+            <div class="text-center mb-16">
+                <h1 class="heading-1 mb-6">À propos de moi</h1>
+                <p class="body-large max-w-3xl mx-auto text-secondary">
+                    Développeur web passionné par la création d'expériences digitales modernes et innovantes
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section class="py-16 bg-card">
+        <div class="container mx-auto px-5">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <h2 class="heading-2 mb-6">Mon histoire</h2>
+                    <div class="space-y-6">
+                        <p class="body-medium text-secondary">
+                            Passionné par la technologie depuis mon plus jeune âge, j'ai découvert ma vocation 
+                            dans le développement web il y a plusieurs années. Ce qui a commencé comme une simple 
+                            curiosité s'est transformé en une véritable passion.
+                        </p>
+                        <p class="body-medium text-secondary">
+                            J'aime particulièrement créer des interfaces utilisateur intuitives et des expériences 
+                            web fluides. Mon approche combine créativité et technique pour donner vie aux idées 
+                            les plus ambitieuses.
+                        </p>
+                        <p class="body-medium text-secondary">
+                            Toujours en quête d'apprentissage, je reste à l'affût des dernières tendances et 
+                            technologies pour offrir des solutions modernes et performantes à mes clients.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 grid grid-cols-2 gap-6">
+                        <div class="text-center p-6 bg-secondary-olive/20 rounded-lg">
+                            <div class="text-3xl font-bold text-brand-primary mb-2">3+</div>
+                            <div class="body-small">Années d'expérience</div>
+                        </div>
+                        <div class="text-center p-6 bg-secondary-olive/20 rounded-lg">
+                            <div class="text-3xl font-bold text-brand-primary mb-2">50+</div>
+                            <div class="body-small">Projets réalisés</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="order-1 lg:order-2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-80 h-80 rounded-full bg-gradient-to-br from-brand-primary/20 to-secondary-olive/20 flex items-center justify-center">
+                            <!-- Remplacer par votre vraie photo -->
+                            <div class="w-64 h-64 rounded-full bg-secondary-olive flex items-center justify-center">
+                                <i class="fas fa-user text-6xl text-brand-primary"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Éléments décoratifs -->
+                        <div class="absolute -top-4 -right-4 w-8 h-8 bg-brand-primary rounded-full"></div>
+                        <div class="absolute -bottom-6 -left-6 w-12 h-12 bg-secondary-yellow rounded-full"></div>
+                        <div class="absolute top-1/2 -left-8 w-6 h-6 bg-secondary-blue rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-16 bg-page">
+        <div class="container mx-auto px-5">
+            <div class="text-center mb-16">
+                <h2 class="heading-2 mb-6">Mes valeurs</h2>
+                <p class="body-medium text-secondary max-w-2xl mx-auto">
+                    Les principes qui guident mon travail au quotidien
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 bg-card rounded-lg border border-border-light hover:border-border-medium transition-all">
+                    <div class="w-16 h-16 bg-brand-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-rocket text-2xl text-brand-primary"></i>
+                    </div>
+                    <h3 class="heading-5 mb-4">Innovation</h3>
+                    <p class="body-small text-secondary">
+                        Toujours à la recherche de solutions créatives et de technologies de pointe 
+                        pour répondre aux défis les plus complexes.
+                    </p>
+                </div>
+                
+                <div class="text-center p-8 bg-card rounded-lg border border-border-light hover:border-border-medium transition-all">
+                    <div class="w-16 h-16 bg-secondary-yellow/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-2xl text-secondary-yellow"></i>
+                    </div>
+                    <h3 class="heading-5 mb-4">Collaboration</h3>
+                    <p class="body-small text-secondary">
+                        L'écoute et la communication sont essentielles pour créer des projets 
+                        qui dépassent les attentes.
+                    </p>
+                </div>
+                
+                <div class="text-center p-8 bg-card rounded-lg border border-border-light hover:border-border-medium transition-all">
+                    <div class="w-16 h-16 bg-secondary-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-gem text-2xl text-secondary-blue"></i>
+                    </div>
+                    <h3 class="heading-5 mb-4">Qualité</h3>
+                    <p class="body-small text-secondary">
+                        Chaque ligne de code est pensée pour la performance, la maintenabilité 
+                        et l'expérience utilisateur.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-16 bg-card">
+        <div class="container mx-auto px-5">
+            <div class="text-center mb-16">
+                <h2 class="heading-2 mb-6">Mon parcours</h2>
+                <p class="body-medium text-secondary max-w-2xl mx-auto">
+                    Les étapes clés de mon évolution professionnelle
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="relative">
+                    <!-- Timeline line -->
+                    <div class="absolute left-8 top-0 bottom-0 w-px bg-border-medium hidden md:block"></div>
+                    
+                    <!-- Timeline items -->
+                    <div class="space-y-12">
+                        <div class="relative flex items-start">
+                            <div class="flex-shrink-0 w-16 h-16 bg-brand-primary rounded-full flex items-center justify-center text-page font-bold text-lg relative z-10">
+                                2024
+                            </div>
+                            <div class="ml-8 md:ml-12">
+                                <h3 class="heading-5 mb-2">Développeur Web Freelance</h3>
+                                <p class="body-small text-secondary mb-4">
+                                    Création de solutions web sur mesure pour des clients variés. 
+                                    Spécialisation dans les technologies modernes et l'optimisation des performances.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">React</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="relative flex items-start">
+                            <div class="flex-shrink-0 w-16 h-16 bg-secondary-yellow rounded-full flex items-center justify-center text-page font-bold text-lg relative z-10">
+                                2023
+                            </div>
+                            <div class="ml-8 md:ml-12">
+                                <h3 class="heading-5 mb-2">Développeur Frontend</h3>
+                                <p class="body-small text-secondary mb-4">
+                                    Développement d'interfaces utilisateur pour une startup tech. 
+                                    Focus sur l'expérience utilisateur et les animations fluides.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="tech-tag">Vue.js</span>
+                                    <span class="tech-tag">Sass</span>
+                                    <span class="tech-tag">Figma</span>
+                                    <span class="tech-tag">Git</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="relative flex items-start">
+                            <div class="flex-shrink-0 w-16 h-16 bg-secondary-blue rounded-full flex items-center justify-center text-white font-bold text-lg relative z-10">
+                                2022
+                            </div>
+                            <div class="ml-8 md:ml-12">
+                                <h3 class="heading-5 mb-2">Formation Développement Web</h3>
+                                <p class="body-small text-secondary mb-4">
+                                    Formation intensive en développement web full-stack. 
+                                    Apprentissage des fondamentaux et des bonnes pratiques.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                    <span class="tech-tag">Express</span>
+                                    <span class="tech-tag">API REST</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="relative flex items-start">
+                            <div class="flex-shrink-0 w-16 h-16 bg-secondary-olive rounded-full flex items-center justify-center text-primary font-bold text-lg relative z-10">
+                                2021
+                            </div>
+                            <div class="ml-8 md:ml-12">
+                                <h3 class="heading-5 mb-2">Premiers pas en programmation</h3>
+                                <p class="body-small text-secondary mb-4">
+                                    Découverte de la programmation en autodidacte. 
+                                    Premiers projets personnels et passion naissante pour le code.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Python</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-page">
+        <div class="container mx-auto px-5 text-center">
+            <h2 class="heading-2 mb-6">Travaillons ensemble</h2>
+            <p class="body-large text-secondary max-w-2xl mx-auto mb-8">
+                Prêt à donner vie à votre projet ? Discutons de vos idées et créons quelque chose d'exceptionnel.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="btn-primary">
+                    Démarrer un projet
+                </a>
+                <a href="cv.html" class="btn-secondary">
+                    Télécharger mon CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-page border-t border-border-light py-12">
+        <div class="container mx-auto px-5">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="heading-5 mb-4">Portfolio</h3>
+                    <p class="body-small text-secondary">
+                        Développeur web passionné créant des expériences digitales modernes et performantes.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="heading-5 mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="body-small text-secondary hover:text-brand-primary transition-colors">À propos</a></li>
+                        <li><a href="portfolio.html" class="body-small text-secondary hover:text-brand-primary transition-colors">Projets</a></li>
+                        <li><a href="skills.html" class="body-small text-secondary hover:text-brand-primary transition-colors">Compétences</a></li>
+                        <li><a href="contact.html" class="body-small text-secondary hover:text-brand-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="heading-5 mb-4">Suivez-moi</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="mailto:contact@example.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-border-light mt-8 pt-8 text-center">
+                <p class="body-small text-secondary">
+                    © 2025 Portfolio. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/mode.js"></script>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Portfolio Développeur Web</title>
+    <meta name="description" content="Découvrez mes réalisations et projets de développement web. Applications, sites vitrine et solutions sur mesure.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-page text-primary font-inter antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-page/90 backdrop-blur-sm border-b border-border-light z-50">
+        <div class="container mx-auto px-5 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-brand-primary">
+                    <a href="index.html">Portfolio</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link">À propos</a></li>
+                    <li><a href="portfolio.html" class="nav-link active">Projets</a></li>
+                    <li><a href="skills.html" class="nav-link">Compétences</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="cv.html" class="nav-link">CV</a></li>
+                </ul>
+
+                   <!-- CONTENEUR POUR LE BOUTON DE THÈME ET LE BOUTON MOBILE -->
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full border border-border-light hover:bg-card transition">
+                        🌙
+                    </button>
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden text-brand-primary focus:outline-none" id="mobile-menu-btn">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden mt-4 pb-4" id="mobile-menu">
+                <ul class="flex flex-col space-y-2">
+                    <li><a href="index.html" class="nav-link block">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link block">À propos</a></li>
+                    <li><a href="portfolio.html" class="nav-link block active">Projets</a></li>
+                    <li><a href="skills.html" class="nav-link block">Compétences</a></li>
+                    <li><a href="contact.html" class="nav-link block">Contact</a></li>
+                    <li><a href="cv.html" class="nav-link block">CV</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-page">
+        <div class="container mx-auto px-5">
+            <div class="text-center mb-16">
+                <h1 class="heading-1 mb-6">Mes projets</h1>
+                <p class="body-large max-w-3xl mx-auto text-secondary">
+                    Une sélection de mes réalisations récentes en développement web
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+     <section class="pb-16 bg-page">
+        <div class="container mx-auto px-5">
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active" data-filter="all">
+                    Tous
+                </button>
+                <button class="filter-btn" data-filter="web">
+                    Sites Web
+                </button>
+                <button class="filter-btn" data-filter="app">
+                    Applications
+                </button>
+                <button class="filter-btn" data-filter="ui">
+                    UI/UX
+                </button>
+                <button class="filter-btn" data-filter="api">
+                    API/Backend
+                </button>
+            </div>
+        </div>
+    </section> 
+
+    <!-- Projects Grid -->
+    <section class="pb-16 bg-card">
+        <div class="container mx-auto px-5">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                
+                <!-- Project 1 - E-commerce -->
+                <div class="project-card group cursor-pointer fade-in-up" data-category="web app" onclick="openProject('project1')">
+                    <div class="aspect-video bg-secondary-olive rounded-lg mb-6 relative overflow-hidden">
+                        <div class="w-full h-full bg-gradient-to-br from-brand-primary/20 to-secondary-olive flex items-center justify-center">
+                            <i class="fas fa-shopping-cart text-4xl text-brand-primary"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                            <i class="fas fa-eye text-2xl text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="heading-5 mb-3">Application E-commerce</h3>
+                    <p class="body-small text-secondary mb-4">
+                        Boutique en ligne moderne avec panier dynamique, gestion des stocks et interface d'administration.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">LocalStorage</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="caption text-brand-primary">2024</span>
+                        <div class="flex space-x-2">
+                            <a href="#" class="text-secondary hover:text-brand-primary transition-colors" onclick="event.stopPropagation()">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="text-secondary hover:text-brand-primary transition-colors" onclick="event.stopPropagation()">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 - Portfolio -->
+                <div class="project-card group cursor-pointer fade-in-up" data-category="web ui" onclick="openProject('project2')">
+                    <div class="aspect-video bg-secondary-olive rounded-lg mb-6 relative overflow-hidden">
+                        <div class="w-full h-full bg-gradient-to-br from-secondary-yellow/20 to-secondary-olive flex items-center justify-center">
+                            <i class="fas fa-mobile-alt text-4xl text-secondary-yellow"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                            <i class="fas fa-eye text-2xl text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="heading-5 mb-3">Portfolio Responsive</h3>
+                    <p class="body-small text-secondary mb-4">
+                        Site portfolio personnel avec animations fluides, design moderne et optimisation SEO complète.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-tag">Responsive</span>
+                        <span class="tech-tag">Animation</span>
+                        <span class="tech-tag">SEO</span>
+                        <span class="tech-tag">Performance</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="caption text-brand-primary">2024</span>
+                        <div class="flex space-x-2">
+                            <a href="#" class="text-secondary hover:text-brand-primary transition-colors" onclick="event.stopPropagation()">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="text-secondary hover:text-brand-primary transition-colors" onclick="event.stopPropagation()">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 - Dashboard -->
+                <div class="project-card group cursor-pointer fade-in-up" data-category="app ui" onclick="openProject('project3')">
+                    <div class="aspect-video bg-secondary-olive rounded-lg mb-6 relative overflow-hidden">
+                        <div class="w-full h-full bg-gradient-to-br from-secondary-blue/20 to-secondary-olive flex items-center justify-center">
+                            <i class="fas fa-chart-bar text-4xl text-secondary-blue"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                            <i class="fas fa-eye text-2xl text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="heading-5 mb-3">Dashboard Analytics</h3>
+                    <p class="body-small text-secondary mb-4">
+                        Interface d'administration avec graphiques interactifs et gestion des données en temps réel.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-tag">Chart.js</span>
+                        <span class="tech-tag">API</span>
+                        <span class="tech-tag">Admin</span>
+                        <span class="tech-tag">Real-time</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="caption text-brand-primary">2023</span>
+                        <div class="flex space-x-2">
+                            <a href="#" class="text-secondary hover:text-brand-primary transition-colors" onclick="event.stopPropagation()">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="text-secondary hover:text-brand-primary transition-colors" onclick="event.stopPropagation()">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 - API REST -->
+                <div class="project-card group cursor-pointer fade-in-up" data-category="api" onclick="openProject('project4')">
+                    <div class="aspect-video bg-secondary-olive rounded-lg mb-6 relative overflow-hidden">
+                        <div class="w-full h-full bg-gradient-to-br from-brand-primary/30 to-secondary-olive flex items-center justify-center">
+                            <i class="fas fa-server text-4xl text-brand-primary"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                            <i class="fas fa-eye text-2xl text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="heading-5 mb-3">API REST Complète</h3>
+                    <p class="body-small text-secondary mb-4">
+                        API RESTful robuste avec authentification, gestion des utilisateurs et documentation interactive.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">JWT</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="caption text-brand-primary">2023</span>
+                        <div class="flex space-x-2">
+                            <a href="#" class="text-secondary hover:text-brand-primary transition-colors" onclick="event.stopPropagation()">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="text-secondary hover:text-brand-primary transition-colors" onclick="event.stopPropagation()">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 - Site vitrine -->
+                <div class="project-card group cursor-pointer fade-in-up" data-category="web" onclick="openProject('project5')">
+                    <div class="aspect-video bg-secondary-olive rounded-lg mb-6 relative overflow-hidden">
+                        <div class="w-full h-full bg-gradient-to-br from-secondary-yellow/30 to-secondary-olive flex items-center justify-center">
+                            <i class="fas fa-globe text-4xl text-secondary-yellow"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                            <i class="fas fa-eye text-2xl text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="heading-5 mb-3">Site Vitrine Professionnel</h3>
+                    <p class="body-small text-secondary mb-4">
+                        Site corporate moderne avec CMS intégré, multilingue et optimisé pour les moteurs de recherche.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">SASS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">CMS</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="caption text-brand-primary">2023</span>
+                        <div class="flex space-x-2">
+                            <a href="#" class="text-secondary hover:text-brand-primary transition-colors" onclick="event.stopPropagation()">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="text-secondary hover:text-brand-primary transition-colors" onclick="event.stopPropagation()">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 - Application mobile -->
+                <div class="project-card group cursor-pointer fade-in-up" data-category="app ui" onclick="openProject('project6')">
+                    <div class="aspect-video bg-secondary-olive rounded-lg mb-6 relative overflow-hidden">
+                        <div class="w-full h-full bg-gradient-to-br from-secondary-blue/30 to-secondary-olive flex items-center justify-center">
+                            <i class="fas fa-mobile text-4xl text-secondary-blue"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                            <i class="fas fa-eye text-2xl text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="heading-5 mb-3">PWA Mobile-First</h3>
+                    <p class="body-small text-secondary mb-4">
+                        Application web progressive avec fonctionnalités offline et notifications push.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-tag">PWA</span>
+                        <span class="tech-tag">Service Worker</span>
+                        <span class="tech-tag">IndexedDB</span>
+                        <span class="tech-tag">Push API</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="caption text-brand-primary">2023</span>
+                        <div class="flex space-x-2">
+                            <a href="#" class="text-secondary hover:text-brand-primary transition-colors" onclick="event.stopPropagation()">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="text-secondary hover:text-brand-primary transition-colors" onclick="event.stopPropagation()">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button class="btn-secondary" id="load-more-btn">
+                    Voir plus de projets
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-page">
+        <div class="container mx-auto px-5 text-center">
+            <h2 class="heading-2 mb-6">Un projet en tête ?</h2>
+            <p class="body-large text-secondary max-w-2xl mx-auto mb-8">
+                Collaborons pour donner vie à vos idées et créer des solutions web innovantes
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="btn-primary">
+                    Démarrer un projet
+                </a>
+                <a href="skills.html" class="btn-secondary">
+                    Mes compétences
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-page border-t border-border-light py-12">
+        <div class="container mx-auto px-5">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="heading-5 mb-4">Portfolio</h3>
+                    <p class="body-small text-secondary">
+                        Développeur web passionné créant des expériences digitales modernes et performantes.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="heading-5 mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="body-small text-secondary hover:text-brand-primary transition-colors">À propos</a></li>
+                        <li><a href="portfolio.html" class="body-small text-secondary hover:text-brand-primary transition-colors">Projets</a></li>
+                        <li><a href="skills.html" class="body-small text-secondary hover:text-brand-primary transition-colors">Compétences</a></li>
+                        <li><a href="contact.html" class="body-small text-secondary hover:text-brand-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="heading-5 mb-4">Suivez-moi</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="mailto:contact@example.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-border-light mt-8 pt-8 text-center">
+                <p class="body-small text-secondary">
+                    © 2025 Portfolio. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/mode.js"></script>
+</body>
+</html>

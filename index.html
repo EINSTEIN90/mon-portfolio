@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Développeur Web</title>
+    <meta name="description" content="Portfolio professionnel d'un développeur web spécialisé en HTML, CSS, JavaScript et technologies modernes">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-page text-primary font-inter antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-page/90 backdrop-blur-sm border-b border-border-light z-50">
+        <div class="container mx-auto px-5 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-brand-primary">
+                    Portfolio
+                </div>
+               
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link">À propos</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Projets</a></li>
+                    <li><a href="skills.html" class="nav-link">Compétences</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="cv.html" class="nav-link">CV</a></li>
+                </ul>
+
+              <!-- CONTENEUR POUR LE BOUTON DE THÈME ET LE BOUTON MOBILE -->
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full border border-border-light hover:bg-card transition">
+                        🌙
+                    </button>
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden text-brand-primary focus:outline-none" id="mobile-menu-btn">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden mt-4 pb-4" id="mobile-menu">
+                <ul class="flex flex-col space-y-2">
+                    <li><a href="index.html" class="nav-link block">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link block">À propos</a></li>
+                    <li><a href="portfolio.html" class="nav-link block">Projets</a></li>
+                    <li><a href="skills.html" class="nav-link block">Compétences</a></li>
+                    <li><a href="contact.html" class="nav-link block">Contact</a></li>
+                    <li><a href="cv.html" class="nav-link block">CV</a></li>
+                </ul>
+            </div>
+             
+        </div>
+
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section relative min-h-screen flex items-center overflow-hidden">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="container mx-auto px-5 relative z-10">
+            <div class="max-w-4xl">
+            <!--<h1 class="hero-title mb-6">
+                    Développeur<br>
+                    Web<br>
+                    Créatif
+                </h1> -->
+
+                <h1 class="hero-title mb-6">
+                    <span>Développeur</span>
+                    <span>Web</span>
+                    <span>Créatif</span>
+                </h1> 
+
+                
+                <p class="body-large max-w-2xl mb-8">
+                   Salut, je suis Albert Sama, passionné par le développement web moderne, je crée des expériences digitales uniques 
+                    avec HTML, CSS, JavaScript et les dernières technologies.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="portfolio.html" class="btn-primary">
+                        Voir mes projets
+                    </a>
+                    <a href="contact.html" class="btn-secondary">
+                        Me contacter
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-brand-primary text-xl"></i>
+        </div>
+    </section> 
+
+    <!-- Projects Preview -->
+    <section class="py-24 bg-card">
+        <div class="container mx-auto px-5">
+            <div class="text-center mb-16">
+                <h2 class="heading-2 mb-4">Projets récents</h2>
+                <p class="body-medium text-secondary max-w-2xl mx-auto">
+                    Découvrez une sélection de mes dernières réalisations
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="project-card group cursor-pointer" onclick="openProject('project1')">
+                    <div class="aspect-video bg-secondary-olive rounded-lg mb-4 relative overflow-hidden">
+                        <div class="w-full h-full bg-gradient-to-br from-brand-primary/20 to-secondary-olive flex items-center justify-center">
+                            <i class="fas fa-code text-4xl text-brand-primary"></i>
+                        </div>
+                    </div>
+                    <h3 class="heading-5 mb-2">Application E-commerce</h3>
+                    <p class="body-small mb-4">Interface moderne pour boutique en ligne avec panier dynamique</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+                
+                <!-- Project Card 2 -->
+                <div class="project-card group cursor-pointer" onclick="openProject('project2')">
+                    <div class="aspect-video bg-secondary-olive rounded-lg mb-4 relative overflow-hidden">
+                        <div class="w-full h-full bg-gradient-to-br from-secondary-yellow/20 to-secondary-olive flex items-center justify-center">
+                            <i class="fas fa-mobile-alt text-4xl text-secondary-yellow"></i>
+                        </div>
+                    </div>
+                    <h3 class="heading-5 mb-2">Portfolio Responsive</h3>
+                    <p class="body-small mb-4">Site vitrine adaptatif avec animations fluides</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-tag">Responsive</span>
+                        <span class="tech-tag">Animation</span>
+                        <span class="tech-tag">SEO</span>
+                    </div>
+                </div>
+                
+                <!-- Project Card 3 -->
+                <div class="project-card group cursor-pointer" onclick="openProject('project3')">
+                    <div class="aspect-video bg-secondary-olive rounded-lg mb-4 relative overflow-hidden">
+                        <div class="w-full h-full bg-gradient-to-br from-secondary-blue/20 to-secondary-olive flex items-center justify-center">
+                            <i class="fas fa-database text-4xl text-secondary-blue"></i>
+                        </div>
+                    </div>
+                    <h3 class="heading-5 mb-2">Dashboard Analytics</h3>
+                    <p class="body-small mb-4">Interface d'administration avec graphiques interactifs</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-tag">Charts.js</span>
+                        <span class="tech-tag">API</span>
+                        <span class="tech-tag">Admin</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="portfolio.html" class="btn-primary">
+                    Voir tous les projets
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Preview -->
+    <section class="py-24 bg-page">
+        <div class="container mx-auto px-5">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="heading-2 mb-6">Compétences techniques</h2>
+                    <p class="body-medium text-secondary mb-8">
+                        Maîtrise des technologies frontend et backend pour créer des solutions web complètes et performantes.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="body-small font-semibold">HTML5 & CSS3</span>
+                                <span class="caption">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="body-small font-semibold">JavaScript</span>
+                                <span class="caption">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="body-small font-semibold">Responsive Design</span>
+                                <span class="caption">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <a href="skills.html" class="btn-secondary">
+                            Toutes mes compétences
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center">
+                    <div class="w-80 h-80 rounded-full bg-gradient-to-br from-brand-primary/10 to-secondary-olive/10 flex items-center justify-center">
+                        <i class="fas fa-laptop-code text-6xl text-brand-primary"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-card">
+        <div class="container mx-auto px-5 text-center">
+            <h2 class="heading-2 mb-6">Prêt à collaborer ?</h2>
+            <p class="body-large text-secondary max-w-2xl mx-auto mb-8">
+                Discutons de votre projet et créons ensemble quelque chose d'exceptionnel
+            </p>
+            <a href="contact.html" class="btn-primary">
+                Démarrer un projet
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-page border-t border-border-light py-12">
+        <div class="container mx-auto px-5">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="heading-5 mb-4">Portfolio</h3>
+                    <p class="body-small text-secondary">
+                        Développeur web passionné créant des expériences digitales modernes et performantes.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="heading-5 mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="body-small text-secondary hover:text-brand-primary transition-colors">À propos</a></li>
+                        <li><a href="portfolio.html" class="body-small text-secondary hover:text-brand-primary transition-colors">Projets</a></li>
+                        <li><a href="skills.html" class="body-small text-secondary hover:text-brand-primary transition-colors">Compétences</a></li>
+                        <li><a href="contact.html" class="body-small text-secondary hover:text-brand-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="heading-5 mb-4">Suivez-moi</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="mailto:contact@example.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-border-light mt-8 pt-8 text-center">
+                <p class="body-small text-secondary">
+                    © 2025 Portfolio. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/mode.js"></script>
+</body>
+</html>

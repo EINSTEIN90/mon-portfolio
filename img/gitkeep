@@ -1,0 +1,18 @@
+# Dossier pour les images
+
+Ajoutez ici vos images :
+- Photo de profil
+- Screenshots de projets
+- Icônes personnalisées
+- Images d'illustration
+
+## Formats recommandés
+- **Photos** : JPG (optimisées, < 500KB)
+- **Logos/Icônes** : SVG ou PNG
+- **Screenshots** : WebP si possible, sinon PNG
+
+## Nommage
+- `profile.jpg` - Photo de profil
+- `project-1.jpg` - Screenshot projet 1
+- `logo.svg` - Logo principal
+- `favicon.ico` - Favicon
