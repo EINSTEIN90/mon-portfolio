@@ -41,29 +41,6 @@ input, textarea, select {
   color: #1a1c1b !important;
 }
 
-/* Thème clair - s'applique si le navigateur est en mode clair */
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg-page: #ffffff;
-    --bg-card: #f4f4f4;
-
-    --text-primary: #1a1c1b;
-    --text-secondary: #555555;
-    --text-inverse: #ffffff;
-
-    --border-light: rgba(0, 0, 0, 0.1);
-    --border-medium: rgba(0, 0, 0, 0.3);
-    --border-strong: rgba(0, 0, 0, 0.6);
-
-    --brand-primary: #0073e6;
-    --brand-hover: rgba(0, 115, 230, 0.8);
-    --brand-active: rgba(0, 115, 230, 0.6);
-
-    --secondary-olive: #cccccc;
-    --secondary-yellow: #f8d47a;
-    --secondary-blue: #005bb5;
-  }
-}
 
 /* Thème clair - pour le basculement manuel avec JavaScript */
 .light-mode {
